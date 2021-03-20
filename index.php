@@ -1,4 +1,8 @@
-<?php $apikey = 'AIzaSyAj5QmajYAo93wfMGYhsECo1wJr7MSUp-w'; ?>
+<?php 
+	$lines = file('.env', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+	$apikey = explode('=', trim($lines[0]), 2)[1];
+?>
 
 <!DOCTYPE html>
 <html>
